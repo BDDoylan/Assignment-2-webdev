@@ -1,10 +1,35 @@
 /* My reduce function implementation */
 
-function myReduce(obj, func, out)
+Array.prototype.myReduce = function(callback, initial)
 {
-    for(let i of obj)
+    let output = 0;
+    
+    if(initial !== undefined)
     {
-        out = func(out, i);
+        output = initial;
     }
-    return out;
+    
+    for(let i of this)
+    {
+        output = callback(output, i);
+    }
+    return output;
 }
+
+/* Callback function for testing */
+
+function testFunc(accumulator, currentValue){
+    return  accumulator + currentValue;
+}
+
+/* Test #1: Without initial value */
+
+const arr1 = [1, 9, 19, 13, 21, 50];
+
+console.log("Test #1 - Without initial value: " + arr1.myReduce(testFunc));
+
+/* Test #2: With initial value */
+
+const arr2 = [2, 8, 20, 12, 22, 49];
+
+console.log("Test #2 - With initial value: " + arr2.myReduce(testFunc, 5));
