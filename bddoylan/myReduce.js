@@ -1,5 +1,17 @@
 /* My reduce function implementation */
 
+/*
+  Functionality: 
+  
+  Runs a callback function on each element in the array. 
+  
+  It results in a single output value that is returned
+  by the reducer function used.
+
+  It implements an initial value which can be used in 
+  addition with the array this method is called upon.
+*/
+
 Array.prototype.myReduce = function(callback, initial)
 {
     let output = 0;
@@ -13,12 +25,14 @@ Array.prototype.myReduce = function(callback, initial)
     {
         output = callback(output, i);
     }
+
     return output;
 }
 
 /* Callback function for testing */
 
-function testFunc(accumulator, currentValue){
+function testFunc(accumulator, currentValue)
+{
     return  accumulator + currentValue;
 }
 

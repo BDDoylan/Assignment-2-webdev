@@ -1,5 +1,17 @@
 /* My reduce function implementation */
 
+/*
+  Functionality: 
+  
+  Runs a callback function on each element in the array. 
+  
+  It returns true if all elements makes the callback 
+  function return true.
+
+  It returns false if even a single element makes the 
+  callback function return false.
+*/
+
 Array.prototype.myEvery = function(callback)
 {   
     for(let i of this)
@@ -9,12 +21,14 @@ Array.prototype.myEvery = function(callback)
             return false;
         }
     }
+
     return true;
 }
 
 /* Callback function for testing */
 
-function testFunc(input){
+function testFunc(input)
+{
     return input < 20;
 }
 
