@@ -8,6 +8,7 @@ Array.prototype.myEach = function (callbackFn)
 {
     for (let i = 0; i < this.length; i++)
     {
+        // When their is no specified value at an index
         if (this[i] === undefined) continue;
         callbackFn(this[i], i, this);
     }
