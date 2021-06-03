@@ -16,3 +16,8 @@ Array.prototype.myMap = function (callback)
     //return the new array
     return newArray;
 }
+
+console.log("myMap:");
+let arr = [1, 2, 3];
+arr = arr.myMap(x=>x*2);
+console.log(arr);
