@@ -12,3 +12,7 @@ Array.prototype.myEach = function (callbackFn)
         callbackFn(this[i], i, this);
     }
 };
+
+console.log("myEach:")
+const arr = [1, 2, ,3]
+arr.myEach((x)=>console.log(x));
