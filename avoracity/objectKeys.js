@@ -2,7 +2,7 @@
     function to retreive the object's name
 */
 
-let grabKeys = {
+const grabKeys = {
     
     // return all names of objects
 };

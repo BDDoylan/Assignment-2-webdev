@@ -2,7 +2,7 @@
     function to retreive the object's values
 */
 
-let grabValues = {
+const grabValues = {
     
     // return all values of object
 };
