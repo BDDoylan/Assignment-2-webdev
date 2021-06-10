@@ -1,22 +1,24 @@
+
+
+
 /*
     function to retreive the last index of the list
 */
 
-Array.prototype.lastIndexOf = function (callback) 
+Array.prototype.mylastIndexOf = function (callback) 
 {
-
-    // cycle through the array
-    for (let index = 0; index < this.length; index++)
+    for (let i =0; i < this.length; i++)
     {
-        // if last element found, return index of last encountered element
-        if ( index == this.length - 1)
+        if (i === this[i-1])
         {
-            return index;
+            return i;    // if last index found return element
         }
-        // else return -1
-        return -1
     }
-   
+    return -1;        // if not found return -1
         
 };
 
+console.log("mylastIndexOf: ")
+const arr = ["Do", "Re", "Mi"]
+const theLastIndex = arr.mylastIndexOf(word => word.length > 1);
+console.log(theLastIndex);
