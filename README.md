@@ -2,7 +2,10 @@
 
 ## Members:
 
-### Doylan Mihov, Benjamin Izrailov, Arnoldo Solis, Michael Alvarez
+### Doylan Mihov - github.com/BDDoylan
+### Benjamin Izrailov - github.com/MediumBen
+### Arnoldo Solis - github.com/arnoldosolis
+### Michael Alvarez - github.com/Avoracity
 
 ## Goal:
 
