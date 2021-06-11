@@ -10,12 +10,14 @@
 
 const object = { a: 1, b: 2, c: 3 };
 
-function grabValues()
+function grabValues(callback)
 {
-    for (const property in object)
+    let objArr = []
+    for (let values in callback)
     {
-        console.log(`The object's values are : ${object[property]}`);
+        objArr.push(callback[values]); // pushes the object's values into the array
     }
+    return objArr;
 }
 
 console.log(grabValues(object));

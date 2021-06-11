@@ -10,11 +10,14 @@
 
 const object = { a: 1, b: 2, c: 3 };
 
-function grabKeys() {
-    for (const property in object) 
+function grabKeys(callback)
+{
+    let objArr = []
+    for (let keys in callback)
     {
-        console.log(` The object's keys : ${property}`);
+        objArr.push(keys);  // pushes object's keys into the array objKeys
     }
+    return objArr;
 }
 
 console.log(grabKeys(object));
