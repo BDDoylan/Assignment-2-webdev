@@ -8,21 +8,18 @@
     of the key:value pairs of that object.
 */
 
-Object.prototype.grabKeys = function(keys) {
+const object = { a: 1, b: 2, c: 3 };
 
-    var keys = [];
-    var i = 0;
+function grabKeys() {
+    for (const property in object) 
+    {
+        console.log(` The object's keys : ${property}`);
+    }
+}
 
-    for (keys[i++] in foo) {}
-  
-};
+console.log(grabKeys(object));
 
-
-const obj = {
-    a: 'some string',
-    b: 13,
-    c: false    
-};
-
-// display object's name using the keys() method
-console.log(grabKeys);
+// expected output:
+// a
+// b
+// c

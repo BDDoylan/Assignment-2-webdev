@@ -8,24 +8,19 @@
 
 */
 
-Object.prototype.grabValues = function(key, obj) {
+const object = { a: 1, b: 2, c: 3 };
 
-    for (var key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) {
-            var val = obj[key];
-            // use val
-        }
+function grabValues()
+{
+    for (const property in object)
+    {
+        console.log(`The object's values are : ${object[property]}`);
     }
-   
-    // return all names of objects
-};
+}
 
+console.log(grabValues(object));
 
-const obj = {
-    a: 'some string',
-    b: 13,
-    c: false    
-};
-
-// display object's name using the keys() method
-console.log(grabValues);
+// expected output:
+//  1
+//  2
+//  3
